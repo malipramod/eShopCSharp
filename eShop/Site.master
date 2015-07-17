@@ -1,0 +1,266 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>eShop..The Ultimate Online Shopping</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1250" />
+<link rel="stylesheet" type="text/css" media="screen, projection" href="menu.css" />
+<link rel="stylesheet" type="text/css" media="screen, projection" href="style.css" />
+
+<style type="text/css">
+
+
+div.wrap1 .wrap2 {
+	/* only with left panel- background-image: url(img/bg1.gif); */
+	/* right and left panel */ background-image: url(img/bg2.gif);
+	/* only with right panel - background-image: url(img/bg3.gif); */
+}
+
+
+    .style1
+    {
+        width: 245px;
+    }
+    .style2
+    {
+        width: 234px;
+    }
+
+
+</style>
+</head>
+<body>
+    
+    <form id="form1" runat="server">
+    
+<div class="wrap1">
+
+	<div class="wrap2">
+
+		<div class="logo">
+		
+		<div style="display:inline; float:left; height: 71px;">
+			
+			
+			<div class="slogan">
+			    <br />
+                <br />
+                <asp:Panel style="position:absolute; top:160px; left: 33px; width: 816px; margin-bottom: 1px;" 
+                    ID="Panel4" runat="server" Height="44px" Visible="False">
+                    <asp:Menu ID="Menu4" runat="server" onmenuitemclick="Menu4_MenuItemClick" 
+                Orientation="Horizontal" Width="438px" style="text-align: left">
+                        <Items>
+                            <asp:MenuItem ImageUrl="~/img/ADMINBUTTON/ADD PRODUCTS.png" 
+                                NavigateUrl="~/admin/adminadd.aspx"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/img/ADMINBUTTON/EDIT PRODUCTS.png" 
+                                NavigateUrl="~/admin/adminedit.aspx"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/img/ADMINBUTTON/ADD CATEGORIES.png" 
+                                NavigateUrl="~/admin/adminaddcat.aspx"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/img/ADMINBUTTON/EDIT CATEGORIES.png"></asp:MenuItem>
+                            <asp:MenuItem ImageUrl="~/img/ADMINBUTTON/MANAGE.png"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </asp:Panel>
+		
+		
+			
+			</div>
+			
+		</div>
+		
+		
+			
+		</div>
+
+		<div id="menu"> 
+	 		
+           		
+			    <asp:Menu ID="Menu2" runat="server" ForeColor="#66FF33" ItemWrap="True" 
+                    onmenuitemclick="Menu2_MenuItemClick" Orientation="Horizontal" 
+                    StaticSubMenuIndent="100%" Width="541px">
+                   
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" ImageUrl="~/img/buttons/home.png">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/catalog.aspx" 
+                            ImageUrl="~/img/buttons/Products.png">
+                            <asp:MenuItem NavigateUrl="~/products.aspx?catname=cars" 
+                                ImageUrl="~/img/buttons/cars.png"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/products.aspx?catname=mobiles" 
+                                ImageUrl="~/img/buttons/mobiles.png"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/products.aspx?catname=cloths" 
+                                ImageUrl="~/img/buttons/cloths.png"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/products.aspx?catname=printers" 
+                                ImageUrl="~/img/buttons/printer.png"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/products.aspx?catname=laptops" 
+                                ImageUrl="~/img/buttons/laptops.png"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/login.aspx" ImageUrl="~/img/buttons/accounts.png">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ContactUs.aspx" 
+                            ImageUrl="~/img/buttons/contact.png"></asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Policy.aspx" ImageUrl="~/img/buttons/policy.png">
+                        </asp:MenuItem>
+                        <asp:MenuItem ImageUrl="~/img/buttons/CART.png" NavigateUrl="~/cart.aspx">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+           		
+			</div>
+
+			<div class="info">
+                <div style="display:inline; float:right; height: 30px; width: 255px;">
+		            
+		            <input type="text"/>
+		            <a href="#"><img border="0" src="img/Search.gif" alt="" /></a></div>
+                
+			    
+                                
+		        <table style="width:102%; height: 34px;">
+                    <tr>
+                        <td class="style1">
+                            <asp:Panel ID="Panel1" runat="server" Width="243px">
+                                <asp:ImageButton ID="ImageButton2" runat="server" 
+    Height="20px" ImageUrl="~/img/Login.gif" onclick="ImageButton2_Click" 
+    Width="101px" />
+                                <asp:ImageButton ID="ImageButton1" runat="server" Height="20px" 
+                                    ImageUrl="~/img/Register.gif" onclick="ImageButton1_Click1" Width="104px" />
+                            </asp:Panel>
+                        </td>
+                        <td class="style2">
+                            &nbsp;</td>
+                        <td align=right>
+                            <asp:Panel ID="Panel2" runat="server" 
+                                Visible="False" Width="286px">
+                                <asp:Label ID="Label1" runat="server" Font-Size="Medium" Text="Label"></asp:Label>
+                                &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+                                <asp:LinkButton ID="LinkButton6" runat="server" onclick="LinkButton6_Click">SETTINGS</asp:LinkButton>
+                                &nbsp;&nbsp;&nbsp; &nbsp;
+                                <asp:Button ID="Button1" runat="server" Height="26px" onclick="Button1_Click" 
+                                    Text="LOGOUT" />
+                            </asp:Panel>
+                        </td>
+                    </tr>
+                </table>
+                
+		        </div>
+
+			<div class="leftpanel">
+			
+				 <div class="header">Categories</div>
+				 
+				 
+						<ul id="categories">
+                			<li style="border-top:0;">
+                			
+                                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">mobiles</asp:LinkButton>
+                            
+                                </li>
+                			<li>
+                			
+                                <asp:LinkButton ID="LinkButton2" runat="server" onclick="LinkButton2_Click">cars</asp:LinkButton>
+                            
+                                </li>
+                            <li>
+                            
+                                <asp:LinkButton ID="LinkButton3" runat="server">computers</asp:LinkButton>
+                            
+                                </li>
+                			<li>
+                			<asp:LinkButton ID="LinkButton4" runat="server" onclick="LinkButton4_Click">cloths</asp:LinkButton>
+                                    
+                                </li>
+                			<li class="selected">
+                			
+                                <asp:LinkButton ID="LinkButton5" runat="server" 
+                                    onclick="LinkButton5_Click">printers</asp:LinkButton>
+                                    
+                                </li>
+                			
+						</ul>
+						
+						<br />
+				 
+				 
+				 <div class="header">Office</div>
+				 
+				 <div class="text">
+				 
+				 	 Hpes Projects Ltd<br /><br />
+					 A-33, Sec64<br />
+				    <span class="divider">Noida,UP</span>
+					
+					 Telephone: +421 903 000 000<br />
+					 E-mail: e-mail@domain.com<br />
+					 ICQ: 000-000-000<br />
+					 Skype: corporation1<br /><br />
+				 
+				 </div> 
+				  
+			</div>
+	
+			<div class="mainpanel">
+			
+				<div class="text_">
+				
+				<h1><a href="#">Welcome </a></h1>
+				
+				</div>
+				
+				<asp:ContentPlaceHolder id="MainContent" runat="server">
+        
+        </asp:ContentPlaceHolder>
+				
+			</div>
+			
+			<div class="rightpanel">
+			
+				 <div class="header">Todays Special</div>
+				 
+				 <asp:ContentPlaceHolder id="SpecialContent" runat="server">
+        
+                </asp:ContentPlaceHolder>
+				 <div class="inquiry">
+				 
+				     &nbsp; <strong></strong><br /><br />
+				 
+				 </div>
+				 
+				 <div class="header">Shopping Cart</div>
+				 <asp:ContentPlaceHolder id="Cart" runat="server">
+        
+                     <asp:ListBox ID="ListBox1" runat="server" Width="196px"></asp:ListBox>
+        
+                </asp:ContentPlaceHolder>
+				  
+				 </div> 
+				  
+			</div>
+
+		</div>
+		
+		
+		
+		<div class="info1">
+			<font color="black">
+			    <div style="display:inline; float:left;">© 2009 <a href="#">eShop.com</a>. Design <a href="http:HpesProjects.com">
+                    HpesProjects</a>.</div>
+			    <div style="display:inline; float:right;"><a href="#" title="">SiteMap</a></div>
+			</font>
+		</div>
+		
+		
+
+	</div>
+
+
+</div>  
+    
+    </form>
+    
+</body>
+</html>
